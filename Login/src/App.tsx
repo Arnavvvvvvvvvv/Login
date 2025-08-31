@@ -33,12 +33,14 @@ function App() {
   };
 
   const handleSecuritySubmit = () => {
-    if (selectedOption !== 'you') {
-      showRoastPopup("LOL nope. They're bad, but you're the undisputed champion 💀");
-    } else {
-      setCurrentStep('success');
-    }
-  };
+  if (selectedOption !== 'you') {
+    showRoastPopup("LOL nope. They're bad, but you're the undisputed champion 💀");
+  } else {
+    // redirect to link
+    window.location.href = "https://hack-wreck.vercel.app/";
+  }
+};
+
 
   const renderLogin = () => (
     <div className="min-h-screen bg-gradient-to-br from-red-500 via-red-600 to-orange-500 flex flex-col">
